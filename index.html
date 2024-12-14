@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        width: auto;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Event Registration Form</h1></center>
+    <form method="post">
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full_name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm_password"
+        required
+      />
+      <label for="event-type">Event Type:</label>
+      <select id="event-type" name="event_type" required>
+        <option value="workshop">Workshop</option>
+        <option value="seminar">Seminar</option>
+        <option value="conference">Conference</option>
+      </select>
+
+      <label for="event-date">Event Date:</label>
+      <input type="date" id="event-date" name="event_date" required />
+
+      <label for="event-time">Event Time:</label>
+      <input type="time" id="event-time" name="event_time" required />
+
+      <label for="event-duration">Event Duration (Hours):</label>
+      <input
+        type="number"
+        id="event-duration"
+        name="event_duration"
+        min="1"
+        required
+      />
+      <label style="display: inline">Gender:</label>
+
+      <label for="male" style="display: inline"
+        ><input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          style="width: 30px"
+        />Male</label
+      >
+
+      <label for="female" style="display: inline"
+        ><input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          style="width: 30px"
+        />Female</label
+      >
+
+      <label for="other" style="display: inline"
+        ><input
+          type="radio"
+          id="other"
+          name="gender"
+          value="other"
+          style="width: 30px"
+        />Other</label
+      >
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required />
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required />
+
+      <label for="zip">ZIP Code:</label>
+      <input type="text" id="zip" name="zip" pattern="[0-9]{5}" required />
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <label for="meal-preference">Meal Preference:</label>
+      <select id="meal-preference" name="meal_preference">
+        <option value="veg">Vegetarian</option>
+        <option value="non-veg">Non-Vegetarian</option>
+        <option value="vegan">Vegan</option>
+      </select>
+
+      <label for="tshirt-size">T-shirt Size:</label>
+      <select id="tshirt-size" name="tshirt_size">
+        <option value="s">Small</option>
+        <option value="m">Medium</option>
+        <option value="l">Large</option>
+        <option value="xl">XL</option>
+      </select>
+      <label for="resume">Attach Resume:</label>
+      <input type="file" id="resume" name="resume" />
+
+      <label for="website">Website/Portfolio:</label>
+      <input type="url" id="website" name="website" />
+
+      <label for="social-media">Social Media Handle:</label>
+      <input type="text" id="social-media" name="social_media" />
+      <label>
+        <input
+          type="checkbox"
+          name="subscribe"
+          value="yes"
+          style="width: 20px"
+        />
+        Subscribe to Newsletter
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          name="agree"
+          value="yes"
+          style="width: 20px"
+          required
+        />
+        I agree to the Terms and Conditions
+      </label>
+      <input type="hidden" name="event_id" value="12345" />
+      <label for="status">Registration Status:</label>
+      <input type="text" id="status" name="status" value="Pending" readonly />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
